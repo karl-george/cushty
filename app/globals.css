@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -12,15 +12,26 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Cushty Colour Theme */
+@theme {
+  --gray-bg: #f7f7f7;
+  --gray-bg-dark: #eeeeee;
+  --color-accent-yellow: #e58411;
+  --color-text: #1e1e1e;
+  --color-text-faded: #8d8d8d;
+  --color-text-blue: #0d1b39;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .container {
+    @apply max-w-screen-2xl mx-auto lg:px-20 md:px-10 px-8;
+  }
+
+  .nav-link {
+    @apply text-lg text-white capitalize;
+  }
+
+  .hero-title {
+    @apply text-white capitalize text-[90px] font-bold;
+  }
 }
