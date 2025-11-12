@@ -4,11 +4,13 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <nav className='container'>
+    <nav className='container z-10 absolute top-0 left-0 right-0 py-10'>
       <div className='flex flex-row items-center justify-between'>
         {/* Logo */}
         <div>
-          <Link href={'/'}>Cushty</Link>
+          <Link href={'/'} className='text-[28px] text-white font-bold'>
+            Cushty
+          </Link>
         </div>
         {/* Nav Links */}
         <div className='flex flex-row gap-16'>
