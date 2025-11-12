@@ -1,10 +1,12 @@
-import { NAV_LINKS } from '@/utils/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavLinks from './NavLinks';
 
 const Header = () => {
+  const user = true;
+
   return (
-    <nav className='container z-10 absolute top-0 left-0 right-0 py-10'>
+    <header className='container z-10 absolute top-0 left-0 right-0 py-10'>
       <div className='flex flex-row items-center justify-between'>
         {/* Logo */}
         <div>
@@ -13,15 +15,16 @@ const Header = () => {
           </Link>
         </div>
         {/* Nav Links */}
-        <div className='flex flex-row gap-16'>
-          {NAV_LINKS.map((link) => (
-            <Link key={link.label} href={link.href} className='nav-link'>
-              {link.label}
-            </Link>
-          ))}
-        </div>
+        <nav className='hidden lg:block'>
+          <NavLinks />
+        </nav>
         {/* Cart */}
         <div>
+          {user ? (
+            <div>{/* UserDropdown */}</div>
+          ) : (
+            <div>{/* Login Button */}</div>
+          )}
           <Image
             src={'images/icons/Bag.svg'}
             alt='Cart'
@@ -31,7 +34,7 @@ const Header = () => {
           />
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
