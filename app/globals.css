@@ -33,4 +33,16 @@
   .hero-title {
     @apply text-white capitalize text-[90px] font-bold;
   }
+
+  .subtitle {
+    @apply text-color-text text-[42px] font-semibold;
+  }
+
+  .feature-title {
+    @apply text-color-text text-2xl font-semibold;
+  }
+
+  .faded {
+    @apply text-color-text-faded;
+  }
 }
