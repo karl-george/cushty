@@ -31,11 +31,11 @@
   }
 
   .hero-title {
-    @apply text-white capitalize text-[90px] font-bold;
+    @apply text-white capitalize text-4xl lg:text-[90px] font-bold;
   }
 
   .subtitle {
-    @apply text-[42px] font-semibold;
+    @apply lg:text-[42px] font-semibold;
   }
 
   .feature-title {
